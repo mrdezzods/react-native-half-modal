@@ -157,7 +157,7 @@ export default class SemiModal extends Component<Props, State> {
         <Animated.View
           style={[
             styles.modal,
-            { top: Dimensions.get('window').height + this.props.extraHeight - this.state.modalHeight - 44 - 32 - 16 }, // TODO (navbar + padding + margin)
+            { top: Dimensions.get('window').height - this.props.extraHeight - this.state.modalHeight - 44 - 32 - 16 }, // TODO (navbar + padding + margin)
             { transform: this.state.modalPan.getTranslateTransform() },
             this.props.style,
           ]}
